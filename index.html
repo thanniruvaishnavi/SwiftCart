@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Product Gallery - Showcase Your Business</title>
+    <link rel="stylesheet" href="css/styles.css" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css"
+    />
+  </head>
+  <body>
+    <!-- Header -->
+    <header class="header">
+      <div class="container">
+        <div class="logo">
+          <h1><i class="fas fa-store"></i> SwiftCart</h1>
+        </div>
+        <nav class="nav">
+          <a href="#products">Products</a>
+          <a href="#about">About</a>
+          <a href="#contact">Contact</a>
+        </nav>
+      </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="hero">
+      <div class="container">
+        <div class="hero-content">
+          <h2>Discover Our Amazing Products</h2>
+          <p>Quality items crafted with care for your everyday needs</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- Filter Controls -->
+    <section class="filters" id="products">
+      <div class="container">
+        <h3>Browse by Category</h3>
+        <div class="filter-buttons">
+          <button class="filter-btn active" data-filter="all">
+            All Products
+          </button>
+          <button class="filter-btn" data-filter="electronics">
+            Electronics
+          </button>
+          <button class="filter-btn" data-filter="clothing">Clothing</button>
+          <button class="filter-btn" data-filter="home">Home & Garden</button>
+          <button class="filter-btn" data-filter="sports">Sports</button>
+          <button class="filter-btn" data-filter="books">Books</button>
+        </div>
+
+        <!-- Search Bar -->
+        <div class="search-container">
+          <i class="fas fa-search search-icon"></i>
+          <input
+            type="text"
+            id="searchInput"
+            placeholder="Search products..."
+            class="search-input"
+          />
+        </div>
+      </div>
+    </section>
+
+    <!-- Product Grid -->
+    <section class="products">
+      <div class="container">
+        <div class="product-grid" id="productGrid">
+          <!-- Products will be dynamically inserted here -->
+        </div>
+
+        <!-- No Results Message -->
+        <div class="no-results" id="noResults" style="display: none">
+          <i class="fas fa-search"></i>
+          <h3>No products found</h3>
+          <p>Try adjusting your search or filter criteria</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- Product Modal -->
+    <div class="modal" id="productModal">
+      <div class="modal-content">
+        <span class="close-btn" id="closeModal">&times;</span>
+        <div class="modal-body">
+          <div class="modal-image">
+            <img id="modalImage" src="" alt="" />
+            <div class="image-nav">
+              <button class="nav-btn prev" id="prevImage">
+                <i class="fas fa-chevron-left"></i>
+              </button>
+              <button class="nav-btn next" id="nextImage">
+                <i class="fas fa-chevron-right"></i>
+              </button>
+            </div>
+          </div>
+          <div class="modal-info">
+            <div class="modal-header">
+              <h2 id="modalTitle"></h2>
+              <span class="modal-category" id="modalCategory"></span>
+            </div>
+            <div class="modal-price" id="modalPrice"></div>
+            <div class="modal-description" id="modalDescription"></div>
+            <div class="modal-features" id="modalFeatures"></div>
+            <div class="modal-actions">
+              <button class="btn btn-primary" id="contactBtn">
+                <i class="fas fa-envelope"></i> Contact Us
+              </button>
+              <button class="btn btn-secondary" id="shareBtn">
+                <i class="fas fa-share"></i> Share
+              </button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Loading Spinner -->
+    <div class="loading" id="loading">
+      <div class="spinner"></div>
+      <p>Loading products...</p>
+    </div>
+
+    <!-- Footer -->
+    <footer class="footer">
+      <div class="container">
+        <div class="footer-bottom">
+          <p>&copy; 2025 Your Business. All rights reserved.</p>
+        </div>
+      </div>
+    </footer>
+
+    <script src="js/products.js"></script>
+    <script src="js/app.js"></script>
+    <script src="js/validate.js"></script>
+  </body>
+</html>
